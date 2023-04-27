@@ -10,7 +10,7 @@ class Settings(object):
         #snake settings
         self.SnakeWinsize:tuple = (400,400)
         self.GridSize:int = 40
-        self.SnakeSpeed:int = 100 ### fastest is 0
+        self.SnakeSpeed:int = 120 ### fastest is 0
         self.SnakeColor:tuple = (0, 116, 232)
         self.SnakeHeadColor = (247, 247, 247)
         self.SnakeFoodColor:tuple = (232, 85, 0)
@@ -23,7 +23,7 @@ class Settings(object):
         self.classification = ["L","R","U","D"]
         self.Populations = 100
         self.Parents = 30
-        self.NetworkLayers = [20,16,4] # output must be 4
+        self.NetworkLayers = [28,22,4] # output must be 4
         self.initPopType = 'Xavier' # Gaussian Uniform Xavier
         self.ActivationFunction_hdl = 'ReLu' # ReLu Sigmoid Tanh LeakyReLu Softmax Softsign Softplus Linear
         self.ActivationFunction_output = 'Softmax' # ReLu Sigmoid Tanh LeakyReLu Softmax Softsign Softplus Linear
