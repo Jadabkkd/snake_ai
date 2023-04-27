@@ -57,9 +57,9 @@ class App(Settings,Snake,SnakeRadar,SnakeFood,SetupInput,Utils,GeneticAI,DrawNeu
                 
     def run(self):
         self.PygameInit()
-        try:
+        if self.use_pretrained:
             self.generatePopulations(True)
-        except FileNotFoundError:
+        else:
             self.generatePopulations()
         self.pepare_node_xy(0.8)
         self.RandomPosition(3)

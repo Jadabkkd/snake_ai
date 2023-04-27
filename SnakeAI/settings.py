@@ -19,6 +19,7 @@ class Settings(object):
         self.steps = self.maxsteps
         
         #AI settings
+        self.use_pretrained = True
         self.classification = ["L","R","U","D"]
         self.Populations = 100
         self.Parents = 30
