@@ -1,5 +1,6 @@
 # Snake Ai with Genetic Algorithm
 From **Charles Darwin's theory** + **Pygame** and now it become to Snake Ai.
+![](https://github.com/Jadabkkd/snake_ai/blob/main/snake_ai.gif)
 # Running
 run app.py
 
