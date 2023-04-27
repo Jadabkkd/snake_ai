@@ -20,3 +20,17 @@ stateDiagram
     Mutation --> GerneratePop 
 ```
 
+# My best setting so far...
+ - in settings.py<br>
+	self.use_pretrained = True<br>
+	self.classification = ["L","R","U","D"]<br>
+	self.Populations = 1500<br>
+	self.Parents = 500<br>
+	self.NetworkLayers = [28,22,4]<br>
+	self.initPopType = 'Xavier'<br>
+	self.ActivationFunction_hdl = 'ReLu'<br>
+	self.ActivationFunction_output = 'Softmax'<br>
+	self.SelectionType = ['Roulette']<br>
+	self.CrossoverType = ['SBX','SPX']<br>
+	self.MutationType = ['Gaussian','Uniform']<br>
+	self.mutation_prop = 0.05<br>
