@@ -10,7 +10,7 @@ class Settings(object):
         #snake settings
         self.SnakeWinsize:tuple = (400,400)
         self.GridSize:int = 40
-        self.SnakeSpeed:int = 150 ### max speed is 0
+        self.SnakeSpeed:int = 100 ### fastest is 0
         self.SnakeColor:tuple = (0, 116, 232)
         self.SnakeHeadColor = (247, 247, 247)
         self.SnakeFoodColor:tuple = (232, 85, 0)
@@ -24,16 +24,13 @@ class Settings(object):
         self.Populations = 100
         self.Parents = 30
         self.NetworkLayers = [20,16,4] # output must be 4
-        self.initPopType = 'Xavier'
-        self.ActivationFunction_hdl = 'ReLu'
-        self.ActivationFunction_output = 'Softmax'
-        self.SelectionType = ['Roulette']
-        self.CrossoverType = ['SBX','SPX']
+        self.initPopType = 'Xavier' # Gaussian Uniform Xavier
+        self.ActivationFunction_hdl = 'ReLu' # ReLu Sigmoid Tanh LeakyReLu Softmax Softsign Softplus Linear
+        self.ActivationFunction_output = 'Softmax' # ReLu Sigmoid Tanh LeakyReLu Softmax Softsign Softplus Linear
+        self.SelectionType = ['Roulette'] # Roulette( Roulette wheel selection ),Tour( Tournament Selection )
+        self.CrossoverType = ['SBX','SPX'] # SBX SPX
         self.MutationType = ['Gaussian','Uniform']
         self.mutation_prop = 0.05
-        self.mutation_edit = self.mutation_prop
-        self.Keep_Parents = False
-        self.FullPopulation = False
         
         #Status and Font
         pg.font.init()
@@ -53,6 +50,9 @@ class Settings(object):
         #Utils settings
         self.drawLine = False
         self.drawNeuralNet = True
+        self.mutation_edit = self.mutation_prop
+        self.Keep_Parents = False
+        self.FullPopulation = False
         
         self.ifGridsizePossible()
         
